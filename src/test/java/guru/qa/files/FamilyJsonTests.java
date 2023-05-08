@@ -18,11 +18,9 @@ public class FamilyJsonTests {
     @Test
     void jsonTest() throws Exception {
         Gson objectMapper = new Gson();
-        try (InputStream is = cl.getResourceAsStream("family.json")
-        ) {
+        try (InputStream is = cl.getResourceAsStream("family.json")) {
             assert is != null;
-            try (InputStreamReader reader = new InputStreamReader(is)
-                ){
+            try (InputStreamReader reader = new InputStreamReader(is)){
                 Human humanData = objectMapper.fromJson(reader, Human.class);
                 Assertions.assertEquals(377, humanData.getUser().getUserID());
                 Assertions.assertEquals("Ivan", humanData.getUser().getName());
