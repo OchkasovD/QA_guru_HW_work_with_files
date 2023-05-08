@@ -1,0 +1,18 @@
+{
+  "user": {
+    "userid": 377 ,
+    "name": "Ivan",
+    "children": [
+      {
+        "age": 3,
+        "name": "Masha",
+        "schoolkid": false
+      },
+      {
+        "age": 7,
+        "name": "Igor",
+        "schoolkid": true
+      }
+    ]
+  }
+}
