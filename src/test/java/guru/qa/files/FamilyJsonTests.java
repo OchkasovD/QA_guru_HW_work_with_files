@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 
 public class FamilyJsonTests {
@@ -18,9 +18,10 @@ public class FamilyJsonTests {
     @Test
     void jsonTest() throws Exception {
         Gson objectMapper = new Gson();
-        try (InputStream is = cl.getResourceAsStream("family.json");
+        try (InputStream is = cl.getResourceAsStream("family.json")
         ) {
-            try (InputStreamReader reader = new InputStreamReader(is);
+            assert is != null;
+            try (InputStreamReader reader = new InputStreamReader(is)
                 ){
                 Human humanData = objectMapper.fromJson(reader, Human.class);
                 Assertions.assertEquals(377, humanData.getUser().getUserID());
