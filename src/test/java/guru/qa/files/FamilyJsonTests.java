@@ -28,9 +28,9 @@ public class FamilyJsonTests {
                 Assertions.assertEquals(3, humanData.getUser().getChildren().get(0).getAge());
                 Assertions.assertEquals("Masha", humanData.getUser().getChildren().get(0).getName());
                 Assertions.assertTrue(humanData.getUser().getChildren().get(1).isSchoolKid());
-                }
-        }
-     }
+            }
+         }
+       }
     }
 
 
